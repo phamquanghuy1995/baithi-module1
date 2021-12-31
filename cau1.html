@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = parseFloat(prompt("nhập số a"))
+    let number2 = parseFloat(prompt("nhập số b"))
+    let x
+
+    function solveTheEquation(a, b) {
+
+        if (a !== 0) {
+            x = -b / a;
+        } else if (a === 0 && b === 0) {
+            x = "vô số nghiệm"
+        } else if (a == 0 && b != 0) {
+            x = "vô nghiệm"
+        }
+        return x
+    }
+
+    document.write("x=" + solveTheEquation(number1, number2));
+
+</script>
+</body>
+</html>

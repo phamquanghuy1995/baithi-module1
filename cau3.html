@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhapKyTu = prompt("Nhập chuỗi ký tự")
+    let SoNguyenAm = kyTuNguyenAm(nhapKyTu)
+
+
+    function kyTuNguyenAm(str) {
+        let arr = ["a", "o", "e", "u", "i"]
+        let count = 0
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (str[i] === arr[j]) {
+                    count++
+                }
+            }
+        }
+        if (count !== 0) {
+            return [true, count]
+        } else {
+            return [false, count]
+        }
+    }
+
+    if (SoNguyenAm[0] === true) {
+        document.write("số ký tự nguyên âm trong chuỗi là:" + SoNguyenAm[1])
+    } else {
+        document.write("số ký tự nguyên âm trong chuỗi là:" + SoNguyenAm[1])
+    }
+</script>
+</body>
+</html>
